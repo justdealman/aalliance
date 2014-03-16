@@ -45,6 +45,7 @@ body, html {
 	-webkit-transition:opacity 400ms;
 	-moz-transition:opacity 400ms;
 	transition:opacity 400ms;
+	background:#000000;
 }
 body, .onepage-wrapper, html {
 	display:block;
@@ -156,13 +157,13 @@ button::-moz-focus-inner {
 	font-size:30px;
 	line-height:36px;
 	padding:0;
-	margin:0 0 22px;
+	margin:0 0 21px;
 }
 .index .about h3 span {
 	font-weight:300;
 }
 .index .about img {
-	margin:0 0 16px;
+	margin:0 0 19px;
 }
 .index .about h2 {
 	color:#ffffff;
@@ -313,8 +314,8 @@ button::-moz-focus-inner {
 }
 .header .logo {
 	position:absolute;
-	left:31px;
-	top:0px;
+	left:11px;
+	top:0;
 	cursor:pointer;
 }
 .header ul {
@@ -851,4 +852,75 @@ button::-moz-focus-inner {
 .scroller a.active {
 	color:#000000;
 	background:#f5eb4c url('./images/scroller_a.png') repeat-x top;
+}
+
+.loading {
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:10000;
+	width:100%;
+	height:100%;
+	background:#000000;
+}
+.loading p {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:360px;
+	color:#ffffff;
+	font-size:30px;
+	line-height:30px;
+    font-family:'Segoe UI', sans-serif;
+	text-align:center;
+	margin:-15px 0 0 -180px;
+}
+
+@media screen and (max-height: 720px), screen and (max-width: 1050px) {
+	.linet, .lineb, .linel, .liner {
+		display:none;
+	}
+	.onepage-wrapper .section {
+		zoom:0.9;
+	}
+	.scroller {
+		zoom:1.11;
+		bottom:0;
+	}
+}
+@media screen and (max-height: 650px), screen and (max-width: 980px) {
+	.onepage-wrapper .section {
+		zoom:0.8;
+	}
+	.scroller {
+		zoom:1.25;
+		bottom:0;
+	}
+}
+@media screen and (max-height: 580px), screen and (max-width: 880px) {
+	.onepage-wrapper .section {
+		zoom:0.7;
+	}
+	.scroller {
+		zoom:1.42;
+		bottom:0;
+	}
+}
+@media screen and (max-height: 510px), screen and (max-width: 780px) {
+	.onepage-wrapper .section {
+		zoom:0.6;
+	}
+	.scroller {
+		zoom:1.66;
+		bottom:0;
+	}
+}
+@media screen and (max-height: 440px), screen and (max-width: 680px) {
+	.onepage-wrapper .section {
+		zoom:0.5;
+	}
+	.scroller {
+		zoom:2;
+		bottom:0;
+	}
 }

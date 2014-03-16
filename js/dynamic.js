@@ -1,21 +1,48 @@
-﻿$(document).ready(function() {
+﻿$(window).load(function() {
+	$('.loading').fadeOut(250);
+});
+$(document).ready(function() {
 	$('body').append('<span class="linet"></span><span class="liner"></span><span class="lineb"></span><span class="linel"></span>');
 	$('.scroller').append('<span class="shadowl"></span><span class="shadowr"></span>');
-	$('.wrapper').onepage_scroll({
-	   sectionContainer: 'section',
-	   easing: 'ease',
-	   animationTime: 1000,
-	   pagination: false,
-	   updateURL: false, 
-	   beforeMove: function(index) {},
-	   afterMove: function(index) {},
-	   loop: false,
-	   responsiveFallback: false
-	});
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$('.wrapper').onepage_scroll({
+		   sectionContainer: 'section',
+		   easing: 'ease',
+		   animationTime: 0,
+		   pagination: false,
+		   updateURL: false, 
+		   beforeMove: function(index) {},
+		   afterMove: function(index) {},
+		   loop: false,
+		   responsiveFallback: false
+		});
+		/*document.ontouchmove = function(e) {
+			e.preventDefault();
+		};
+		$('.wrapper').hammer().on('swipeleft', function() {
+			$('.wrapper').moveUp();
+		});
+		$('.wrapper').hammer().on('swiperight', function() {
+			$('.wrapper').moveDown();
+		});*/
+	}
+	else {
+		$('.wrapper').onepage_scroll({
+		   sectionContainer: 'section',
+		   easing: 'ease',
+		   animationTime: 1000,
+		   pagination: false,
+		   updateURL: false, 
+		   beforeMove: function(index) {},
+		   afterMove: function(index) {},
+		   loop: false,
+		   responsiveFallback: false
+		});
+	}
 	$('.scroller').thumbnailScroller({
 		scrollerType:'hoverAccelerate', 
 		scrollerOrientation:'horizontal', 
-		scrollSpeed:1, 
+		scrollSpeed:1,
 		scrollEasing:'easeOutCirc', 
 		scrollEasingAmount:100, 
 		acceleration:1, 

@@ -26,7 +26,7 @@
     beforeMove: null,
     afterMove: null,
     loop: false,
-    responsiveFallback: false
+    responsiveFallback: 2000
         };
         
         /*------------------------------------------------*/
