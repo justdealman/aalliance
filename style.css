@@ -163,7 +163,7 @@ button::-moz-focus-inner {
 	font-weight:300;
 }
 .index .about img {
-	margin:0 0 19px;
+	margin:-21px 0 16px;
 }
 .index .about h2 {
 	color:#ffffff;
@@ -315,7 +315,7 @@ button::-moz-focus-inner {
 .header .logo {
 	position:absolute;
 	left:11px;
-	top:0;
+	top:-5px;
 	cursor:pointer;
 }
 .header ul {
