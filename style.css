@@ -741,6 +741,14 @@ button::-moz-focus-inner {
 .section.contacts .feedback p input:focus, .section.contacts .feedback p textarea:focus {
 	border:1px solid #ffffff;
 }
+.section.contacts .feedback p input.success, .section.contacts .feedback p textarea.success {
+	background:#4cf58c;
+	border:1px solid #49463c !important;
+}
+.section.contacts .feedback p input.error, .section.contacts .feedback p textarea.error {
+	background:#f54c5c;
+	border:1px solid #f54c5c !important;
+}
 .section.contacts .feedback p textarea {
 	height:159px;
 	resize:none;
@@ -874,6 +882,30 @@ button::-moz-focus-inner {
     font-family:'Segoe UI', sans-serif;
 	text-align:center;
 	margin:-15px 0 0 -180px;
+}
+
+div.success {
+	display:none;
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:337px;
+	height:338px;
+	margin:-160px 0 0 -168px;
+	background:url('./images/success_bg.png') no-repeat left top;
+}
+div.success p {
+	position:absolute;
+	left:50px;
+	top:223px;
+	width:237px;
+	color:#ffffff;
+	font-size:20px !important;
+	line-height:24px !important;
+	font-weight:bold;
+	text-align:center;
+	text-transform:uppercase;
+	margin:0;
 }
 
 @media screen and (max-height: 720px), screen and (max-width: 1050px) {

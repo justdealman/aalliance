@@ -162,7 +162,7 @@ $(document).ready(function() {
 			});
 		});
 	});
-	$('.section.help > ul.passive li').live('click', function() {
+	/*$('.section.help > ul.passive li').live('click', function() {
 		$(this).parent('ul').removeClass('passive');
 		$(this).parent('ul').find('h3').fadeOut(250);
 		$(this).parent('ul').children('li').delay(250).animate({'width': '132px', 'padding': '0'}, 500, 'easeOutExpo');
@@ -234,7 +234,7 @@ $(document).ready(function() {
 				});
 			});
 		});
-	});
+	});*/
 	var tabs = $('.section.service .tab');
 	$('.scroller a').click(function () {
 		tabs.slideUp(500, 'easeOutBack');
