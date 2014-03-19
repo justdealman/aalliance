@@ -89,7 +89,8 @@ $(document).ready(function() {
 	$('.section.oil > ul li').each(function() {
 		var a = $(this).children('h6').width()/2+12;
 		$(this).children('h6').css({'margin-left': -a+'px'});
-	});
+	});	
+	$('.section.oil > ul li').append('<span class="close"></span>');
 	$('.section.oil > ul.passive li').live('click', function() {
 		$(this).parent('ul').removeClass('passive');
 		$(this).parent('ul').find('h3').fadeOut(250);
@@ -105,16 +106,18 @@ $(document).ready(function() {
 				$(this).css({'position': 'absolute', 'left': '0', 'bottom': '95px', 'margin-left': '0'});
 				$(this).animate({'width': '950px'}, 500, 'easeOutBounce');
 				$(this).children('div').delay(500).slideDown(500, 'easeOutBack');
+				$(this).children('.close').delay(500).fadeIn(500);
 				$(this).addClass('active');
 				$(this).siblings().addClass('other');
 			});
 		});
 	});
-	$('.section.oil > ul li.active').live('click', function() {
-		var x = $(this).index() * 80;
+	$('.section.oil > ul li.active .close').live('click', function() {
+		var x = $(this).parent().index() * 80;
 		$('.section.oil > ul li').removeClass('other');
-		$(this).children('div').slideUp(500, 'easeInBack');
-		$(this).delay(500).animate({'width': '70px'}, 500, 'easeOutBounce', function() {
+		$(this).parent().children('div').slideUp(500, 'easeInBack');
+		$(this).fadeOut(500);
+		$(this).parent().delay(500).animate({'width': '70px'}, 500, 'easeOutBounce', function() {
 			$(this).css({'position': 'relative', 'left': 'auto', 'bottom': 'auto', 'margin-left': -x+'px'});
 			var timer2 = 0;
 			if (x > 0) {
@@ -136,6 +139,7 @@ $(document).ready(function() {
 		$('.section.oil > ul li').removeClass('other');
 		var x = $('.section.oil > ul li.active').index() * 80;
 		$('.section.oil > ul li.active').children('div').slideUp(500, 'easeInBack');
+		$('.section.oil > ul li.active .close').fadeOut(500);
 		$('.section.oil > ul li.active').delay(500).animate({'width': '70px'}, 500, 'easeOutBounce', function() {
 			$('.section.oil > ul li.active').css({'position': 'relative', 'left': 'auto', 'bottom': 'auto', 'margin-left': -x+'px'});
 			var timer2 = 0;
@@ -155,6 +159,7 @@ $(document).ready(function() {
 						other.css({'position': 'absolute', 'left': '0', 'bottom': '95px', 'margin-left': '0'});
 						other.animate({'width': '950px'}, 500, 'easeOutBounce');
 						other.children('div').delay(500).slideDown(500, 'easeOutBack');
+						other.children('.close').delay(500).fadeIn(500);
 						other.removeClass('other').addClass('active');
 						other.siblings().addClass('other');
 					});
@@ -238,11 +243,17 @@ $(document).ready(function() {
 	var tabs = $('.section.service .tab');
 	$('.scroller a').click(function () {
 		tabs.slideUp(500, 'easeOutBack');
-		tabs.filter(this.hash).delay(500).slideDown(500, 'easeOutBack');
+		tabs.filter(this.hash).delay(500).slideDown(500, 'easeOutBack');	
 		$('.scroller a').removeClass('active');
 		$(this).addClass('active');
 		return false;
-	}).filter(':first').click();
+	});
+	$('.section.service .tab').append('<span class="close"></span>');
+	$('.section.service .tab .close').click(function() {
+		tabs.slideUp(500, 'easeOutBack');
+		$('.scroller a').removeClass('active');
+		return false;
+	});
 	var step = 40;
 	var height = $(window).height();
 	var verticalsize = Math.floor((height/step));

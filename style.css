@@ -382,6 +382,16 @@ button::-moz-focus-inner {
 	margin:0 0 0 -475px;
 	background:url('./images/help_li.png') repeat;
 }
+.section.service .tab > .close {
+	position:absolute;
+	right:-20px;
+	top:-21px;
+	display:block;
+	width:18px;
+	height:17px;
+	cursor:pointer;
+	background:url('./images/close_icon.png') no-repeat left top;
+}
 .section.service .tab > div {
 	padding:25px 0 16px;
 }
@@ -477,6 +487,9 @@ button::-moz-focus-inner {
 	box-shadow:0 10px 10px rgba(51,51,51,0.6);
 	behavior:url('./pie.htc');
 }
+.section.oil > ul li.active {
+	cursor:auto;
+}
 .section.oil > ul li > span {
 	position:relative;
 	float:left;
@@ -493,6 +506,16 @@ button::-moz-focus-inner {
 	max-width:70px;
 	max-height:85px;
 	margin:auto;
+}
+.section.oil > ul li > .close {
+	display:none;
+	position:absolute;
+	right:-20px;
+	top:-21px;
+	width:18px;
+	height:17px;
+	cursor:pointer;
+	background:url('./images/close_icon.png') no-repeat left top;
 }
 .section.oil > ul li h3 {
 	display:table;
@@ -897,14 +920,27 @@ div.success {
 div.success p {
 	position:absolute;
 	left:50px;
-	top:223px;
+	top:198px;
 	width:237px;
 	color:#ffffff;
 	font-size:20px !important;
 	line-height:24px !important;
-	font-weight:bold;
+	font-weight:600 !important;
 	text-align:center;
 	text-transform:uppercase;
+	margin:0;
+}
+div.success h5 {
+	position:absolute;
+	left:50px;
+	top:265px;
+	width:237px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:18px;
+	font-weight:normal;
+	text-align:center;
+	padding:0;
 	margin:0;
 }
 
