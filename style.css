@@ -944,6 +944,12 @@ div.success h5 {
 	margin:0;
 }
 
+ul.t3 li {
+	-webkit-box-shadow:none !important;
+	-moz-box-shadow:none !important;
+	box-shadow:none !important;
+}
+
 @media screen and (max-height: 720px), screen and (max-width: 1050px) {
 	.linet, .lineb, .linel, .liner {
 		display:none;

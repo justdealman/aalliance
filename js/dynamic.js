@@ -247,7 +247,7 @@ $(document).ready(function() {
 		$('.scroller a').removeClass('active');
 		$(this).addClass('active');
 		return false;
-	});
+	}).filter(':first').click();
 	$('.section.service .tab').append('<span class="close"></span>');
 	$('.section.service .tab .close').click(function() {
 		tabs.slideUp(500, 'easeOutBack');
