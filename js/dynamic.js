@@ -1,4 +1,11 @@
-﻿$(window).load(function() {
+﻿function hash() {
+	$(window).hashchange(function(){
+		var x = location.hash.substring(1);
+		$('.wrapper').moveTo(x);
+	});
+	$(window).hashchange();
+}
+$(window).load(function() {
 	$('.loading').fadeOut(250);
 });
 $(document).ready(function() {
@@ -9,8 +16,8 @@ $(document).ready(function() {
 		   sectionContainer: 'section',
 		   easing: 'ease',
 		   animationTime: 0,
+		   updateURL: true, 
 		   pagination: false,
-		   updateURL: false, 
 		   beforeMove: function(index) {},
 		   afterMove: function(index) {},
 		   loop: false,
@@ -32,13 +39,14 @@ $(document).ready(function() {
 		   easing: 'ease',
 		   animationTime: 1000,
 		   pagination: false,
-		   updateURL: false, 
+		   updateURL: true, 
 		   beforeMove: function(index) {},
 		   afterMove: function(index) {},
 		   loop: false,
 		   responsiveFallback: false
 		});
 	}
+	hash();
 	$('.scroller').thumbnailScroller({
 		scrollerType:'hoverAccelerate', 
 		scrollerOrientation:'horizontal', 
@@ -55,22 +63,27 @@ $(document).ready(function() {
     });
 	$('.header .logo').click(function() {
 		$('.wrapper').moveTo(1);
+		window.location.hash = '#1';
 		return false;
 	});
 	$('.index .navigator ul li.service, .header ul li.service').click(function() {
 		$('.wrapper').moveTo(2);
+		window.location.hash = '#2';
 		return false;
 	});
 	$('.index .navigator ul li.oil, .header ul li.oil').click(function() {
 		$('.wrapper').moveTo(3);
+		window.location.hash = '#3';
 		return false;
 	});
 	$('.index .navigator ul li.help, .header ul li.help').click(function() {
 		$('.wrapper').moveTo(4);
+		window.location.hash = '#4';
 		return false;
 	});
 	$('.index .navigator h5, .header ul li.contacts').click(function() {
 		$('.wrapper').moveTo(5);
+		window.location.hash = '#5';
 		return false;
 	});
 	$('input, textarea').each(function () {
