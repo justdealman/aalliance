@@ -9,7 +9,7 @@ $(window).load(function() {
 	$('.loading').fadeOut(250);
 });
 $(document).ready(function() {
-	$('body').append('<span class="linet"></span><span class="liner"></span><span class="lineb"></span><span class="linel"></span>');
+	$('body').append('<span class="linet"></span><span class="liner"></span><span class="linebl"></span><span class="linebr"></span><span class="linel"></span>');
 	$('.scroller').append('<span class="shadowl"></span><span class="shadowr"></span>');
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		$('.wrapper').onepage_scroll({
@@ -282,10 +282,13 @@ $(document).ready(function() {
 	var horizontalsize = Math.floor((width/step));
 	var w = (horizontalsize-1)*step;
 	var x = Math.floor(width-w)/2;
+	var bw = (Math.floor(w/80)*40)-80;
 	$('.linet').css({'left': x+'px', 'top': y+'px', 'width': w+'px'});
 	$('.liner').css({'right': x+'px', 'top': y+'px', 'height': h+'px'});
-	$('.lineb').css({'left': x+'px', 'top': z+'px', 'width': w+'px'});
+	$('.linebl').css({'left': x+'px', 'top': z+'px', 'width': bw+'px'});
+	$('.linebr').css({'right': x+'px', 'top': z+'px', 'width': bw+'px'});
 	$('.linel').css({'left': x+'px', 'top': y+'px', 'height': h+'px'});
+	$('.copy').css({'top': z+'px'});
 	$('.scroller').css({'left': x+'px', 'width': w+'px'});
 });
 $(window).resize(function() {
@@ -299,9 +302,12 @@ $(window).resize(function() {
 	var horizontalsize = Math.floor((width/step));
 	var w = (horizontalsize-1)*step;
 	var x = Math.floor(width-w)/2;
+	var bw = (Math.floor(w/80)*40)-80;
 	$('.linet').css({'left': x+'px', 'top': y+'px', 'width': w+'px'});
 	$('.liner').css({'right': x+'px', 'top': y+'px', 'height': h+'px'});
-	$('.lineb').css({'left': x+'px', 'top': z+'px', 'width': w+'px'});
+	$('.linebl').css({'left': x+'px', 'top': z+'px', 'width': bw+'px'});
+	$('.linebr').css({'right': x+'px', 'top': z+'px', 'width': bw+'px'});
 	$('.linel').css({'left': x+'px', 'top': y+'px', 'height': h+'px'});
+	$('.copy').css({'top': z+'px'});
 	$('.scroller').css({'left': x+'px', 'width': w+'px'});
 });

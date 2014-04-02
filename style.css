@@ -147,10 +147,26 @@ button::-moz-focus-inner {
 .index .about {
 	position:absolute;
 	left:50%;
-	top:15%;
+	top:10.5%;
 	width:960px;
 	text-align:center;
 	margin-left:-480px;
+}
+.index .about h1 {
+	color:#f5eb4c;
+	font-size:30px;
+	line-height:36px;
+	text-transform:uppercase;
+	padding:0;
+	margin:0 0 9px;
+}
+.index .about p {
+	color:#ffffff;
+	font-size:14px;
+	line-height:20px;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin:0;
 }
 .index .about h3 {
 	color:#ffffff;
@@ -163,7 +179,7 @@ button::-moz-focus-inner {
 	font-weight:300;
 }
 .index .about img {
-	margin:-21px 0 16px;
+	margin:-7px 0 16px;
 }
 .index .about h2 {
 	color:#ffffff;
@@ -822,7 +838,7 @@ button::-moz-focus-inner {
 	right:20px;
 	background:url('./images/line_bg.png') repeat-y right;
 }
-.linet, .lineb {
+.linet, .linebl, .linebr {
 	position:absolute;
 	display:block;
 	width:auto;
@@ -832,7 +848,7 @@ button::-moz-focus-inner {
 	top:20px;
 	background:url('./images/line_bg.png') repeat-x top;
 }
-.lineb {
+.linebl, .linebr {
 	bottom:20px;
 	background:url('./images/line_bg.png') repeat-x bottom;
 }
@@ -955,15 +971,55 @@ div.success h5 {
 	padding:0;
 	margin:0;
 }
-
 ul.t3 li {
 	-webkit-box-shadow:none !important;
 	-moz-box-shadow:none !important;
 	box-shadow:none !important;
 }
+.oil .tip {
+	position:absolute;
+	left:50%;
+	top:24.5%;
+	width:960px;
+	text-align:center;
+	margin-left:-480px;
+}
+.oil .tip h3 {
+	color:#f5eb4c;
+	font-size:20px;
+	line-height:24px;
+	font-weight:600;
+	text-transform:uppercase;
+	padding:0;
+	margin:0 0 18px;
+}
+.oil .tip p {
+	color:#ffffff;
+	font-size:18px;
+	line-height:22px;
+	font-weight:600;
+	text-transform:none;
+	padding:0;
+	margin:0 0 16px;
+}
+.copy {
+	position:absolute;
+	left:50%;
+	top:95%;
+	z-index:100;
+	width:140px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:20px;
+	text-align:center;
+	margin:-5px 0 0 -70px;
+}
+.copy a {
+	color:#ffffff;
+}
 
 @media screen and (max-height: 720px), screen and (max-width: 1050px) {
-	.linet, .lineb, .linel, .liner {
+	.linet, .linebl, .linebr, .linel, .liner {
 		display:none;
 	}
 	.onepage-wrapper .section {
@@ -972,6 +1028,10 @@ ul.t3 li {
 	.scroller {
 		zoom:1.11;
 		bottom:0;
+	}
+	.copy {
+		top:auto !important;
+		bottom:10px !important;
 	}
 }
 @media screen and (max-height: 650px), screen and (max-width: 980px) {
