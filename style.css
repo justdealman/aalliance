@@ -168,6 +168,13 @@ button::-moz-focus-inner {
 	text-transform:uppercase;
 	margin:0;
 }
+.index .about p a {
+	color:#ffffff;
+	text-decoration:none;
+}
+.index .about p a:hover {
+	text-decoration:underline;
+}
 .index .about h3 {
 	color:#ffffff;
 	font-size:30px;

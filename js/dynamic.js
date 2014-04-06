@@ -86,6 +86,11 @@ $(document).ready(function() {
 		window.location.hash = '#5';
 		return false;
 	});
+	$('.index .about p a.page5').click(function() {
+		$('.wrapper').moveTo(5);
+		window.location.hash = '#5';
+		return false;
+	});
 	$('input, textarea').each(function () {
 		$(this).data('holder',$(this).attr('placeholder'));
 		$(this).focusin(function(){
